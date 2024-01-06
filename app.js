@@ -55,6 +55,7 @@ function roundOne(event) {
         if (clickedCase.classList.contains('case') && !clickedCase.classList.contains('selected') && !clickedCase.classList.contains('opened')) {
             console.log('we got this far');
             const openedCaseValue = keysObj[clickedCase.textContent];
+            console.log(`opened Case Value: `, openedCaseValue);
             h1.innerHTML = `Case ${clickedCase.textContent} holds $${openedCaseValue}`;
 
             clickedCase.classList.add('opened');
