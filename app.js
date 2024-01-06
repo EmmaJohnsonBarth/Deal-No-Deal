@@ -24,6 +24,25 @@ const updatedKeysObj = keysObj;
 delete updatedKeysObj[answer];
 console.log(`Initial Cases: ${JSON.stringify(updatedKeysObj)}`);
 
+const h1 = document.getElementById("h1")
+const start = document.getElementById("start");
+const caseContainer = document.getElementById('caseContainer')
+let selectedCase = null;
+
+
+start.addEventListener('click', secretCase)
+
+function secretCase(event) {
+    h1.innerHTML = "Choose your secret case";
+    let clickedCase = event.target;
+    if (clickedCase.classList.contains('case')){
+        selectedCase = clickedCase.textContent;
+        console.log("Selected Case: ", selectedCase);
+    }
+};
+
+caseContainer.addEventListener('click', secretCase)
+
 function roundOne() {
     let firstChoice = parseInt(prompt(`Select a case to open. Options remaining: ${Object.keys(updatedKeysObj)}`))
     while(!firstChoice){parseInt(prompt(`Select a case to open. Options remaining: ${Object.keys(updatedKeysObj)}`))};
@@ -62,7 +81,7 @@ function roundOne() {
     // console.log(`Cases remaining: ${JSON.stringify(updatedKeysObj)}`)
 };
 
-roundOne();
+
 
 
 
