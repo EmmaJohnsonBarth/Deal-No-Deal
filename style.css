@@ -1,14 +1,19 @@
 .body {
     display: flex;
     flex-direction: column;
-    /* flex-wrap: wrap; */
     align-items: center;
     border: 3px blue solid bold;
 }
 
+.container {
+    /* background-color: rgb(248,244,228); */
+    background-image: radial-gradient(rgb(197,175,99), rgb(123,128,70), rgb(71,83,78));
+}
+
 h1 {
-    border: 3px solid purple;
+    border: 3px solid rgb(24,27,34);
     padding: 0.5em;
+    background-color: rgb(239,217,141);
 }
 
 .row {
@@ -20,21 +25,37 @@ h1 {
 }
 
 .value {
-    border: 3px solid red;
+    border: 3px solid rgb(24,27,34);
     margin: 5px;
+    background-color: rgb(123,128,70);
+    font-size: large;
+}
+
+.value:hover {
+    border: 5px solid rgb(239,217,141) 
 }
 
 .case-row {
     display: flex;
     justify-content: space-evenly;
     margin: 0.5em;
-    padding: 0.75em 0em;
+    padding: 0.5em 0.5em;
 }
 
 .case {
-    border: 3px solid green;
-    width: 50px;
-    padding: 0.5em;
+    border: 3px solid rgb(24,27,34);
+    border-radius: 8px;
+    width: 60px; 
+    padding: 5px 15px 5px 15px;
+    /* margin: 5px 2px; */
+    text-align: center;
+    background-color: rgb(132, 145, 139);
+    color: rgb(24,27,34)
+}
+
+.case:hover {
+    border: 5px solid rgb(239,217,141);
+    /* transition-duration: 0.2s; */
 }
 
 .col-md-3, .col-md-6 {
@@ -42,6 +63,22 @@ h1 {
 }
 
 .choice {
-    padding: 0.5em;
-    border: 3px solid blue;
+    font-size: large;
+    padding: 0.1em;
+    border: 3px solid rgb(24,27,34);
+    background-color: rgb(197,175,99);
+    border-radius: 12px;
+}
+
+.choice:hover{
+    background-color: rgb(24,27,34);
+    color: rgb(197,175,99);
+    transition-duration: 0.4s;
+}
+
+@media (max-width: 767px){
+    .case {
+        margin: 0.1rem 0.2rem;
+        /* width: 60px; */
+    }
 }
