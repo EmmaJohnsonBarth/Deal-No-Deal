@@ -105,6 +105,7 @@ function bankerOffer(array) {
     let offer = Math.floor(offerUnrounded/1000)*1000
     //Math.round(value/1000)*1000
     console.log(`Offer: ${offer}`)
+    
     return offer;
 }
 
