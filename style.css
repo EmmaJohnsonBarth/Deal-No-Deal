@@ -58,6 +58,22 @@ h1 {
     color: rgb(24,27,34)
 }
 
+.selected {
+    cursor: not-allowed;
+    color: rgb(68, 73, 71);
+    background-color: green;
+}
+
+.opened {
+    cursor: not-allowed;
+    color: rgb(68,73,71);
+    background-color: red;
+};
+
+.removed-value {
+    background-color: magenta;
+}
+
 .case:hover {
     border: 5px solid rgb(239,217,141);
     /* transition-duration: 0.2s; */
